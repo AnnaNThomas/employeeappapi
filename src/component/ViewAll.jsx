@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './Nav'
 
 const ViewAll = () => {
+    const[data,changedata]=useState(
+        [{
+            "name":"anna",
+            "empid":"12",
+            "dept":"cs",
+            "phoneno":"8098763245"
+        },
+        {
+            "name":"annu",
+            "empid":"13",
+            "dept":"civil",
+            "phoneno":"8098763289"
+        },
+        {
+            "name":"anriya",
+            "empid":"13",
+            "dept":"Ec",
+            "phoneno":"8098763212"
+        },
+        {
+            "name":"anju",
+            "empid":"14",
+            "dept":"mechanic",
+            "phoneno":"8098763125"
+        },
+
+        ]
+    )
   return (
     <div>
         <Nav/>
@@ -19,27 +47,17 @@ const ViewAll = () => {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>10</td>
-      <td>cs</td>
-      <td>801242378</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Markus</td>
-      <td>11</td>
-      <td>civil</td>
-      <td>801242379</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Markol</td>
-      <td>13</td>
-      <td>Ec</td>
-      <td>801242568</td>
-    </tr>
+  {data.map(
+    (value,index)=>{return  <tr>
+        <th scope="row">{index+1}</th>
+        <td>{value.name}</td>
+        <td>{value.empid}</td>
+        <td>{value.dept}</td>
+        <td>{value.phoneno}</td>
+        
+      </tr>}
+  )}
+   
   </tbody>
 </table>
                 </div>
