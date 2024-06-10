@@ -3,6 +3,8 @@ import './App.css';
 import AddEmployee from './component/AddEmployee';
 import Search from './component/Search';
 import Delete from './component/Delete';
+import ViewAll from './component/ViewAll';
+import Nav from './component/Nav';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <AddEmployee/>
       <Search/>
       <Delete/>
+      <ViewAll/>
+      <Nav/>
     </div>
     
   );
