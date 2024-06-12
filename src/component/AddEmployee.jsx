@@ -5,14 +5,15 @@ import axios from 'axios';
 const AddEmployee = () => {
     const [data, setData] = useState({
         name: '',
-        empid: '',
+        employeeid: '',
         dept: '',
         phoneno: ''
-    });
+    })
 
     const inputHandler = (event) => {
         setData({ ...data, [event.target.name]: event.target.value });
-    };
+    }
+
 
     const handleSubmit = () => {
         console.log(data);
@@ -44,7 +45,7 @@ const AddEmployee = () => {
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="empid" className="form-label">Empid</label>
-                                <input type="text" className="form-control" name="empid" value={data.empid} onChange={inputHandler} />
+                                <input type="text" className="form-control" name="employeeid" value={data.employeeid} onChange={inputHandler} />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="dept" className="form-label">Dept</label>

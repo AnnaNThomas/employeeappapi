@@ -37,7 +37,7 @@ const ViewAll = () => {
                     return <tr>
                       
                       <td>{value.name}</td>
-                      <td>{value.empid}</td>
+                      <td>{value.employeeid}</td>
                       <td>{value.dept}</td>
                       <td>{value.phoneno}</td>
 
